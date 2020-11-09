@@ -9,6 +9,7 @@
   /* background-color: RGB(2, 86, 156); */
   align-items: center;
   height: 80px;
+  grid-template-columns: 16fr 1fr;
 }
 
 #header h2 {
@@ -16,8 +17,16 @@
   color: black;
   font-size: 30px;
   font-family: cursive;
+  display: grid;
 }
+.go-to-feed{
+    background-color: darkgreen;
+    color: #ffffff;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
 
+}
 #cards-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -187,8 +196,9 @@ div > h3 {
 .added-comment {
   display: grid;
   text-align: left;
-  border: 1px solid grey;
+  border: 2px solid grey;
   margin: 5px 5px;
+  border-radius: 20px;
   background-color: aliceblue;
 }
 .feed-header {
@@ -196,6 +206,8 @@ div > h3 {
   grid-template-columns: 16fr 1fr;
   background-color: cadetblue;
   padding: 40px 0px;
+  font-family: cursive;
+ 
 }
 
 .click-search-div {

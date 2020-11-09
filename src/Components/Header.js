@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 /**
  * 
  * @param {*} props 
@@ -10,7 +10,8 @@ function Header(props) {
     return (
         <div id="header">
             <h2>TOAST A BEER</h2>
-             {/* <Search/> */}
+            <Link to="/" style={{textDecoration:'none'}}><div className="go-to-feed"><h2>BEER FEED</h2></div></Link>
+            
         </div>
     );
 }

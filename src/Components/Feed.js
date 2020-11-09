@@ -30,13 +30,6 @@ if(Array.isArray(data) && data.length===0){
     return (
         <div style={{ display: "grid" }}>
           <FeedHeader />
-          {/* <div> */}
-            {/* <div className="feed">
-              {data.map((value, index) => {
-                console.log("value", value.data[0].name);
-                return <Post data={value.data[0]} />;
-              })}
-            </div> */}
             <div className="loading">
                   <CircularProgress />
                   <h2>Loading Your Feeds</h2>   
