@@ -4,7 +4,7 @@ import React from "react";
  * @param {JSON} props 
  * each json contains name and dexription which we take and display in the post
  * Each post will have an option to 1. LIKE
- *                                  2.Comment
+ *                                  2.Comment( Checks if input box is empty or not and then resets it to empty after comment is made)
  * Onclick of comment the value entered in the input box will be added as a comment to the comment state and be displayed
  */
 function Post(props) {
@@ -22,12 +22,22 @@ function Post(props) {
       setLiked(true);
     }
   };
-//adds the value in input field to comment state
+  /**
+   * if comment input box is empty and user clicks on comment button
+   * he will be alerted to type a text
+   * once a comment is made the input text field is set to empty again
+   */
   const addComment = () => {
+    if(searchRef.current.value===''){
+      alert('Please type some text to comment')
+    }
+    else{
     let newC = searchRef.current.value;
     let line = comment;
     line.push(newC);
     setComment([...line]);
+    searchRef.current.value='';
+    }
   };
 
   const label = liked ? "Unlike" : "Like";
@@ -55,7 +65,7 @@ function Post(props) {
       </div>
       {comment.map((value, index) => {
         return (
-          <p className="added-comment" key={index}>
+          <p className="added-comment" key={index} style={{paddingLeft:"5px"}}>
             {value}
           </p>
         );
